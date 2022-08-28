@@ -1,0 +1,51 @@
+\usepackage{amsmath,amssymb}
+
+\usepackage{unicode-math}
+\usepackage{mathtools}
+\usepackage{tabulary}
+\usepackage{multirow}
+\usepackage{verse}
+\usepackage{moreenum}
+\usepackage{enumitem}
+\usepackage{pstricks}
+
+\usepackage{polyglossia}
+\setmainlanguage{portuges}
+
+% Listas de números separados por vírgulas no modo matemático
+% precisam de um tratamento diferenciado
+
+\newcommand{\splitAtCommas}[1]{%
+  \begingroup
+  \begingroup\lccode`~=`, \lowercase{\endgroup
+    \edef~{\mathchar\the\mathcode`, \penalty0 \noexpand\hspace{0pt plus 1em}}%
+  }\mathcode`,="8000 #1%
+  \endgroup
+}
+
+% Variáveis de controle de parágrafo
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.25em}
+
+% Modo matemático em displaystyle por default
+
+\everymath{\displaystyle}
+
+% Numeração das questões
+
+\newcounter{questoes}[subsection]
+
+\newenvironment {questao}
+{\stepcounter{questoes}
+  \hrulefill
+  
+  \textbf{Questão \arabic{questoes}}:}
+{}
+
+%%% Local Variables:
+%%% mode: latex
+%%% coding: utf-8-unix
+%%% fill-column: 80
+%%% TeX-master: "MASTER"
+%%% End:

@@ -1,0 +1,28 @@
+#+options: toc:nil
+#+language: pt_BR
+
+#+author: Anderson Torres
+#+title: Lista de Exercícios Diversos de Matemática
+
+* Intro
+
+Aqui eu reúno uma coleção antiga de listas de exercícios de matemática olímpica
+que eu colecionava lá pelos idos de 2004. Como HDs ocupam menos espaço que
+papéis, resolvi transformá-los nestas belas listas feitas em LaTeX.
+
+* Organização
+
+Os problemas estão separados por assunto, cada um em um arquivo no diretório
+=enunciados=.
+
+O diretório =config= configura a aparência do documento final - coisas como
+sequência dos problemas, cabeçalhos, títulos etc.
+
+O arquivo =MASTER.tex= funciona como um agregador, reunido-os e apresentando-os
+de maneira ordenada no arquivo final.
+
+# Local Variables:
+# mode:org
+# coding:utf-8-unix
+# fill-column:80
+# End:
